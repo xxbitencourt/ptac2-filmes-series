@@ -44,25 +44,25 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-950 text-white">
-      {/* Cabeçalho superior */}
+      {/* Cabeçalho */}
       <nav className="w-full bg-gray-900 py-3 px-6 flex items-center justify-between">
-        <h1 className="text-xl font-bold">Filmes e Séries</h1>
+        <h1 className="text-xl font-bold">Filmes</h1>
       </nav>
 
-      {/* Hero section */}
-      <header className="relative w-full h-[400px] flex items-center px-12 bg-gray-800">
-        {/* Imagem de fundo */}
+      {/* tamanho */}
+      <header className="relative w-full h-[800px] flex items-center px-12 bg-gray-800">
+        {/* Imagem */}
         <img
-          src="https://m.media-amazon.com/images/M/MV5BOGMwZGJiM2EtMzEwZC00YTYzLWIxNzYtMmJmZWNlZjgxZTMwXkEyXkFqcGc@._V1_.jpg"
+          src="https://m.media-amazon.com/images/M/MV5BZTk4OTlmZDQtYjM2ZC00ZTg3LThlYzItNzk1YjVmYTlkNGUwXkEyXkFqcGc@._V1_.jpg"
           alt="Banner Filmes e Séries"
           className="absolute inset-0 w-full h-full object-cover opacity-60"
         />
 
-        {/* Conteúdo por cima da imagem */}
+        {/* texto */}
         <div className="relative z-10 max-w-2xl">
-          <h2 className="text-5xl font-bold mb-4">Filmes e Séries</h2>
+          <h2 className="text-5xl font-bold mb-4">Filmes</h2>
           <p className="text-lg text-gray-200 mb-6">
-            Descubra os melhores lançamentos, clássicos e novidades em um só lugar.
+            A sinopse de Primitive War (Guerra Primitiva) descreve uma unidade de reconhecimento do Esquadrão Abutre que, em 1968, é enviada a um vale isolado durante a Guerra do Vietnã para encontrar um pelotão desaparecido de Boinas Verdes, apenas para descobrir que o local é habitado por dinossauros pré-históricos e predadores ferozes que se tornam a nova e mais perigosa ameaça do conflito, transformando a missão de busca numa desesperada luta pela sobrevivência. 
           </p>
         </div>
       </header>
