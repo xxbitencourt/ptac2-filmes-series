@@ -63,7 +63,7 @@ async function getPopularMovies(): Promise<Movie[]> {
   }
 }
 
-export default function FilmesPopulares() {
+export default function Filmes() {
   const [filmes, setFilmes] = useState<Movie[]>([]);
   const [carregando, setCarregando] = useState(true);
 

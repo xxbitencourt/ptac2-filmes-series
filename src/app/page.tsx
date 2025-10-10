@@ -1,8 +1,6 @@
-"use client";
+import FilmesPopulares from "./filmes";
 
-import FilmesPopulares from "./FilmesPopulares";
-
-export default function HomePage() {
+export default function Page() {
   return (
     <div>
       <FilmesPopulares />
