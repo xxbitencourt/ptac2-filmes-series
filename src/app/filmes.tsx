@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const API_KEY = "2755f63cce90b74dc3f0268e0d7d5f19"; // Substitua pela sua chave TMDb
+const API_KEY = "2755f63cce90b74dc3f0268e0d7d5f19"; // sua chave TMDb
 const API_BASE = "https://api.themoviedb.org/3";
 const IMAGE_BASE = "https://image.tmdb.org/t/p/w500";
 
