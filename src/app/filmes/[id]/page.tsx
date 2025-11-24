@@ -1,9 +1,9 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Loader from "@/components/ui/loader";
-
 
 const API_KEY = "2755f63cce90b74dc3f0268e0d7d5f19";
 const API_BASE = "https://api.themoviedb.org/3";
@@ -31,19 +31,23 @@ export default function FilmeDetalhesPage() {
     setMovie(null);
     setError(null);
 
+    let mounted = true;
+
     async function fetchMovie() {
       try {
         const res = await fetch(`${API_BASE}/movie/${id}?api_key=${API_KEY}&language=pt-BR`);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
-        setMovie(data);
+        if (mounted) setMovie(data);
       } catch (err) {
         console.error(err);
-        setError("Erro ao carregar informações do filme.");
+        if (mounted) setError("Erro ao carregar informações do filme.");
       }
     }
 
     fetchMovie();
+
+    return () => { mounted = false; };
   }, [id]);
 
   if (!id) return <p style={{ textAlign: "center" }}>ID do filme ausente.</p>;
@@ -54,7 +58,7 @@ export default function FilmeDetalhesPage() {
     <main style={{ padding: 20, maxWidth: 900, margin: "0 auto" }}>
       <h1 style={{ fontSize: 26, marginBottom: 12 }}>{movie!.title}</h1>
 
-      <div style={{ display: "flex", gap: 20 }}>
+      <div style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
         {movie!.poster_path ? (
           <img src={`${IMAGE_BASE}${movie!.poster_path}`} alt={movie!.title} style={{ width: 260, borderRadius: 8 }} />
         ) : (
